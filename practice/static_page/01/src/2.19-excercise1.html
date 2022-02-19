@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      div {
+        box-sizing: border-box;
+      }
+      .head {
+        width: 100%;
+        height: 50px;
+        background-color: antiquewhite;
+      }
+
+      .main {
+        display: table;
+        width: 100%;
+        height: 474px;
+        background-color: aliceblue;
+      }
+      
+      .fl, .center, .fr {
+        display: inline-block;
+
+      }
+
+      .fl {
+        width: 200px;
+        height: 100%;
+        text-align: right;
+        background-color: aquamarine;
+      }
+
+      .center {
+        position: relative;
+        width: calc(100% - 400px);
+        height: 100%;
+        text-align: center;
+        background-color: pink;
+      }
+
+      .center .desc {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          width: fit-content;
+          transform: translate(-50%, -50%);
+          z-index: 1000;
+      }
+
+      .content {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 180px;
+        height: 180px;
+        background-color: tomato;
+        border: 10px solid black;
+        margin-left: -90px;
+        border-radius: 15px 15px 15px 15px;
+      }
+
+      .content a {
+        text-align: center;
+      }
+
+      .fr {
+        width: 200px;
+        height: 100%;
+        text-align: center;
+        background-color: blueviolet;
+      }
+
+      /* 底部 */
+      .footer {
+        width: 100%;
+        height: 50px;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="head">head</div>
+
+    <!-- 主体 -->
+    <div class="main">
+      <div class="fl">左边侧栏</div>
+      <div class="center">
+        <div class="content">
+            <a href="#">我是漂浮在最上层的链接</a>
+        </div>
+        <div class="desc">我是中间部分</div>
+      </div>
+      <div class="fr">右边侧栏</div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">footer</div>
+  </body>
+</html>
