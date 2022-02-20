@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.19-2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      div {
+        box-sizing: border-box;
+      }
+
+      .head {
+        width: 100%;
+        height: 50px;
+        background-color: antiquewhite;
+      }
+
+      /* flex只影响直接子元素，孙子等元素不受影响 */
+      /* flex容器 以下6个属性设置在容器上:
+        1、flex-direction  ：项目的排列方向
+        2、flex-wrap   ：排在一条线上时，如何处理换行
+        3、flex-flow   ：前2者的简写形式
+        4、justify-content   ：项目在主轴的对齐方式
+        5、align-items   ：项目在交叉轴的对齐方式
+        6、align-content    ：多条轴线的对齐方式
+        */
+
+      .main {
+        /* flex写法： */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 474px;
+        background-color: aliceblue;
+      }
+
+      /* 代码合并 */
+      .fl,
+      .center,
+      .fr {
+        height: 100%;
+      }
+
+      .fl {
+        width: 200px;
+        text-align: right;
+        background-color: aquamarine;
+      }
+
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: calc(100% - 400px);
+        text-align: center;
+        background-color: pink;
+      }
+
+      .center .desc {
+        width: fit-content;
+      }
+
+      .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -90px;
+        width: 180px;
+        height: 180px;
+        background-color: tomato;
+        border: 10px solid black;
+
+        border-radius: 15px 15px 15px 15px;
+      }
+
+      .content a {
+        text-align: center;
+      }
+
+      .fr {
+        width: 200px;
+        text-align: center;
+        background-color: blueviolet;
+      }
+
+      /* 底部 */
+      .footer {
+        width: 100%;
+        height: 50px;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="head">head</div>
+
+    <!-- 主体 -->
+    <div class="main">
+      <div class="fl">左边侧栏</div>
+      <div class="center">
+        <div class="content">
+          <a href="#">我是漂浮在最上层的链接</a>
+        </div>
+        <div class="desc">我是中间部分</div>
+      </div>
+      <div class="fr">右边侧栏</div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">footer</div>
+  </body>
+</html>
