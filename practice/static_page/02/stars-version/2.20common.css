@@ -1,0 +1,294 @@
+/* 版心 */
+.main {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* top */
+.top {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+}
+
+.top_box {
+    display: flex;
+    justify-content: space-between;
+    width: 1226px;
+    margin: 0 auto;
+}
+
+.shortcut {
+    width: 728.98px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.shortcut a,
+.login a,
+.shoppingcar {
+    width: fit-content;
+    line-height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.sep {
+    background-color: #424242;
+    color: #b0b0b0;
+}
+
+
+
+.shoppingcar {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 120px;
+    color: #b0b0b0;
+    background-color: orangered;
+}
+
+
+
+/* head */
+.head {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.logo img {
+    width: 56px;
+    line-height: 56px;
+    content: '';
+    background-size: 56px;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    padding-left: 15px;
+}
+
+.nav a {
+    width: fit-content;
+    line-height: 100px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+}
+
+.search input,
+.search button {
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #b0b0b0;
+}
+
+.search input {
+    width: 245px;
+    border-right: 0px;
+}
+
+.search button {
+    width: 52px;
+    line-height: 50px;
+    background-color: #ff6700;
+}
+
+/* banner */
+.banner {
+    display: flex;
+    height: 460px;
+    /* background-color: #fff; */
+}
+
+.dropdown {
+    width: 234px;
+    background-color: rgba(105, 101, 101, .6);
+}
+
+.dropdown ul{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 18px;
+}
+.dropdown ul li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+}
+
+.dropdown-link {
+    display: flex;
+    flex-flow: row nowrap;
+    color: #fff;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-link-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown ul li:hover {
+    background-color: #ff6700;
+}
+
+.dropdown ul li:hover a {
+    background-color: #ff6700;
+}
+
+.dropdown ul li a span {
+    line-height: 42px;
+    left: 190px;
+}
+
+.ad {
+    width: calc(100% - 234px);
+    height: 460px;
+    background: url(../images/lunbodatu1.jpg) center;
+    background-size: cover
+}
+
+.ad img {
+    width: 992px;
+    height: 460px;
+}
+
+.swiper_button_prev {
+    color: #333;
+}
+
+/* promo */
+.promo {
+    display: flex;
+    width: 1226px;
+    height: 190px;
+    background-color: antiquewhite;
+
+}
+
+.service{
+    overflow: hidden;
+    width: 234px;
+    height: 152px;
+    background-color: #5f5750;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.service ul{
+    overflow: hidden;
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service ul li{
+    width: 70px;
+    height: 82px;
+    font-size: 12px;
+    border: 1px solid #6d6565;
+    border-top: 0px;
+    border-left: 0px;
+    padding-left: 8px;
+ 
+}
+
+.service ul li a {
+    display: flex;
+    color: #fff;
+}
+
+
+.promolists{
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.promolists ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promolists ul li{
+    width: 316px;
+    height: 170px;
+    margin-left: 14px;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 1526.950px;
+    background-color:lightblue
+}
+
+.products_ad{
+    display: inline-block;
+}
+.products_ad img{
+    width: 1226px;
+    height: 120px;
+    margin-top: 20px;
+}
+
+
+.phone_hd{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone_title{
+
+}
+
+.phone_title h2{
+    
+}
+
+.more_link{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.more_h3{
+    
+}
+
+.more_arrow{
+    width: 20px;
+    height: 20px;
+    background-color: #ff6700;
+}
