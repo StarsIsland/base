@@ -16,6 +16,7 @@
     justify-content: space-between;
     width: 1226px;
     margin: 0 auto;
+    background-color: #333;
 }
 
 .shortcut {
@@ -38,14 +39,25 @@
     color: #b0b0b0;
 }
 
-
-
 .shoppingcar {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: row nowrap;
+    justify-content: center;
+    align-items: center;
     width: 120px;
+    height: 40px;
     color: #b0b0b0;
-    background-color: orangered;
+
+}
+
+.shoppingcar-icon {
+    display: flex;
+    align-items: center;
+    background: url(../images/0/购物车空.svg);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 10px;
 }
 
 
@@ -102,12 +114,17 @@
 .search input {
     width: 245px;
     border-right: 0px;
+    /* 清除边框的默认样式： */
+    outline: none;
+    padding-left: 10px;
 }
 
 .search button {
     width: 52px;
     line-height: 50px;
-    background-color: #ff6700;
+}
+.search button img{
+    width: 20px;
 }
 
 /* banner */
@@ -122,28 +139,30 @@
     background-color: rgba(105, 101, 101, .6);
 }
 
-.dropdown ul{
+.dropdown ul {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     margin-top: 18px;
 }
+
 .dropdown ul li {
     display: flex;
     align-items: center;
     width: 100%;
     height: 42px;
     line-height: 42px;
+    font-size: 14px;
 }
 
 .dropdown-link {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     padding: 0 20px;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .dropdown-link-icon {
@@ -165,21 +184,55 @@
 }
 
 .ad {
+    position: relative;
     width: calc(100% - 234px);
     height: 460px;
     background: url(../images/lunbodatu1.jpg) center;
     background-size: cover
 }
 
-.ad img {
-    width: 992px;
-    height: 460px;
+.swiper-bullets{
+    position: absolute;
+    display: flex;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+}
+.swiper-bullets-icon {
+    background: url(../images/0/round.svg);
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }
 
-.swiper_button_prev {
+.swiper-button-prev {
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    top: 50%;
+    margin-top: -39.5px;
+    z-index: 1000;
+    background: url(../images/icon-slides.png);
+    width: 41px;
+    height: 69px;
+    display: flex;
+
     color: #333;
 }
 
+.swiper-button-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
+    right:0;
+    z-index: 1000;
+    background: url(../images/icon-slides.png);
+    width: 41px;
+    height: 69px;
+    display: flex;
+    color: #333;
+}
 /* promo */
 .promo {
     display: flex;
@@ -189,7 +242,7 @@
 
 }
 
-.service{
+.service {
     overflow: hidden;
     width: 234px;
     height: 152px;
@@ -198,15 +251,15 @@
     margin-bottom: 20px;
 }
 
-.service ul{
+.service ul {
     overflow: hidden;
-    display: flex; 
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-.service ul li{
+.service ul li {
     width: 70px;
     height: 82px;
     font-size: 12px;
@@ -214,7 +267,7 @@
     border-top: 0px;
     border-left: 0px;
     padding-left: 8px;
- 
+
 }
 
 .service ul li a {
@@ -223,72 +276,145 @@
 }
 
 
-.promolists{
+.promolists {
     margin-top: 14px;
     margin-left: 14px;
     margin-bottom: 20px;
     background-color: #fff;
 }
-.promolists ul{
+
+.promolists ul {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.promolists ul li{
+.promolists ul li {
     width: 316px;
     height: 170px;
-    margin-left: 14px;
+    /* margin-left: 14px; */
+}
+
+.promolists ul li a {
+    display: flex;
+    justify-content: space-between;
+    width: 316px;
+    height: 156px;
 }
 
 /* footer */
 .footer {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+ 
     width: 100%;
     height: 1526.950px;
-    background-color:lightblue
+    background-color: lightblue
 }
 
-.products_ad{
-    display: inline-block;
-}
-.products_ad img{
+
+.products-ad img {
     width: 1226px;
     height: 120px;
     margin-top: 20px;
 }
 
 
-.phone_hd{
+.phone-hd {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
-}
-.phone_title{
-
 }
 
-.phone_title h2{
-    
-}
 
-.more_link{
+.more-link {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.more_h3{
+.more-arrow-right {
+    background: url(../images/0/向右3-fill.svg);
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+
+.phone-items {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+    width: 1226px;
+    height: 614px;
+    background-color: #fff;
+}
+
+.phone-items-column1{
+    background-color: #ff6700;
+}
+.phone-items-column1 img{
+    width: 234px;
+}
+
+.phone-items-column2 {
+    
+    width: 992px;
+    height: 614px;
+    /* 应用到布局中的子元素上， 表示所占的比例*/
+    flex: 1;
+}
+
+
+.phone-items-column2-lists ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.phone-items-column2-lists ul li {
+    width: 25%;
+    height: 50%;
     
 }
 
-.more_arrow{
-    width: 20px;
+
+.phone-items-column2-lists ul li a{
+    display: block;
+    text-align: center;
+}
+
+
+.title{
+    width: 241px;
     height: 20px;
-    background-color: #ff6700;
+    color: #333333;
+    margin: 0px 10px 12px;
+}
+
+.desc{
+    width: 241px;
+    height: 18px;
+    color: #b0b0b0;
+    margin: 0px 10px 10px;
+}
+
+.p-price{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width:241px ;
+    height: 21px;
+    font-size: 14px;
+    color: #ff6700;
+    margin: 0px 10px 14px;
+}
+
+.p-price-num{
+    width: 31.16px;
+    height: 16px;
+}
+
+.p-price-word{
+    width: 14px;
+    height: 16px;
 }
