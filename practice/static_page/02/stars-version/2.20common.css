@@ -46,17 +46,41 @@
     width: 120px;
     height: 40px;
     color: #b0b0b0;
-
+    background:#424242 ;
 }
 
-.shoppingcar-icon {
-    display: flex;
+.shoppingcar:hover {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+.shoppingcar-icon, .shoppingcar-icon1 {
     align-items: center;
-    background: url(../images/0/购物车空.svg);
     width: 20px;
     height: 20px;
     background-size: cover;
     margin-right: 10px;
+}
+
+.shoppingcar-icon {
+    display: flex;
+}
+
+.shoppingcar:hover .shoppingcar-icon {
+    display: none;
+}
+
+.shoppingcar-icon1 {
+    display: none;
+}
+
+.shoppingcar:hover .shoppingcar-icon1{
+    display: flex;
+}
+
+
+.shoppingcar-icon:hover{
+    color: #ff6700;
 }
 
 
@@ -211,28 +235,35 @@
     position: absolute;
     /* top: 50%;
     transform: translateY(-50%); */
+    background: url(../images/0/arrow3.svg);
     top: 50%;
-    margin-top: -39.5px;
+    margin-top: -24px;
     z-index: 1000;
-    background: url(../images/icon-slides.png);
-    width: 41px;
-    height: 69px;
+    width: 48px;
+    height: 48px;
     display: flex;
-
     color: #333;
+}
+
+.swiper-button-prev:hover{
+    background-color: #423c3c;
 }
 
 .swiper-button-next {
     position: absolute;
+    background: url(../images/0/arrow3.svg);
     top: 50%;
     transform: translateY(-50%) rotateY(180deg);
     right: 0;
     z-index: 1000;
-    background: url(../images/icon-slides.png);
-    width: 41px;
-    height: 69px;
+    width: 48px;
+    height: 48px;
     display: flex;
     color: #333;
+}
+
+.swiper-button-next:hover{
+    background-color: #423c3c;
 }
 
 /* promo */
@@ -263,13 +294,34 @@
 }
 
 .service ul li {
-    width: 70px;
-    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    height: 85px;
     font-size: 12px;
     text-overflow: ellipsis;
     overflow:hidden;
-    border: 1px solid #6d6565;
-    border: none;
+    
+}
+
+.service ul li:nth-child(1) {
+    border-right: 1px solid #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.service ul li:nth-child(2) {
+    border-right: 1px solid #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.service ul li:nth-child(3) {
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.service ul li:nth-child(5) {
+    border-left: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
 }
 
 
@@ -289,7 +341,6 @@
     line-height: 41px;
     text-align: center;
     color: #fff;
-    padding: 18px 0px 0px;
 }
 
 
@@ -348,6 +399,12 @@
     height: 58px;
 }
 
+.phone-title{
+    font-size: 22px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .more {
     display: flex;
@@ -360,7 +417,9 @@
 
 .more-link {
     width: 80px;
-    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .more-arrow-right {
@@ -388,6 +447,11 @@
     background-color: #ff6700;
     margin-right: 14px;
     border: 0;
+    transition: all cubic-bezier(0.4, 0, 0.34, 1.09) .5s;
+}
+
+.phone-items-column1:hover{
+    box-shadow: 0px 18px 20px #dfdfdf;
 }
 
 .phone-items-column1 img {
@@ -413,6 +477,12 @@
     width: 234px;
     margin-left: 14px;
     margin-bottom: 14px;
+    transition: all cubic-bezier(0.4, 0, 0.34, 1.09) .5s;
+}
+
+
+.phone-items-column2-lists ul li:hover{
+    box-shadow: 0px 18px 20px #dfdfdf;
 }
 
 
