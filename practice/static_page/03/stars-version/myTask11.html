@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动web局面</title>
+    <link rel="stylesheet" href="./myTask11.css">
+</head>
+<body>
+    <script>
+
+        function calcFontsize() {
+             const currentBodyWidth = document.body.clientWidth;
+             const standardWidth = 375;
+             const currentFontsize = currentBodyWidth / standardWidth * 10;
+             document.querySelector('html').style = `font-size: ${currentFontsize}px`;
+        }
+ 
+        window.onload = () => {
+             calcFontsize();
+        }
+ 
+ 
+         window.onresize = () => {
+             calcFontsize();
+         }
+    </script>
+
+    <div class="w">
+        <div class="header">
+            <div class="top">
+                <div class="top-back"> &nbsp;<返回 </div>
+                <div class="top-title">这是标题</div>
+            </div>
+            <div class="nav">
+                <div class="nav-text">导航</div>
+                <div class="nav-text">导航</div>
+                <div class="nav-text">导航</div>
+                <div class="nav-text">导航</div>
+                <div class="nav-text">导航</div>
+            </div>
+            <div class="nav-img">
+                <img src="./大咪.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="section1">
+                <div class="lable">
+                    <div class="lable-img">
+                        <img src="./11-label.png" alt="">
+                    </div>
+                    <div class="lable-text">标签</div>
+                </div>
+
+                <div class="lable">
+                    <div class="lable-img">
+                        <img src="./11-label.png" alt="">
+                    </div>
+                    <div class="lable-text">标签</div>
+                </div>
+
+                <div class="lable">
+                    <div class="lable-img">
+                        <img src="./11-label.png" alt="">
+                    </div>
+                    <div class="lable-text">标签</div>
+                </div>
+
+                <div class="lable">
+                    <div class="lable-img">
+                        <img src="./11-label.png" alt="">
+                    </div>
+                    <div class="lable-text">标签</div>
+                </div>
+
+                <div class="lable">
+                    <div class="lable-img">
+                        <img src="./11-label.png" alt="">
+                    </div>
+                    <div class="lable-text">标签</div>
+                </div>
+            </div>
+
+            <div class="section2">
+                <div class="section2-column">
+                        <img src="./bear.png" alt="" style="border-right: 0.3rem solid #d3d3d3;">
+                    <br>
+                    <div class="column-title">分栏一</div>
+                    <br>
+                    <div class="column-subtitle">分栏小标题</div>
+                </div>
+
+                <div class="section2-column" >
+                    <img src="./bear2.png" alt="" style="border-right: 0.3rem solid #d3d3d3;">
+                <br>
+                <div class="column-title">分栏二</div>
+                <br>
+                <div class="column-subtitle">分栏小标题</div>
+            </div>
+
+            <div class="section2-column">
+                <img src="./bear3.png" alt="" style="margin-bottom: 1rem;">
+            <br>
+            <div class="column-title">分栏三</div>
+            <br>
+            <div class="column-subtitle">分栏小标题</div>
+        </div>
+            </div>
+            <div class="sep"></div>
+
+            <div class="section3">
+                <div class="module">
+                    <div class="module-title">模块一</div> 
+
+                    <div class="module-content">
+                        <div class="module-img">
+                            <img src="./bear-module.png" alt="" style="display: block;margin-top: -2.5rem;">
+                            <img src="./bear-module.png" alt="" style="display: block;margin-top:1.2rem;margin-bottom: -3.5rem;;">
+                        </div>
+                        <div class="content1">
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                        </div>
+                        <div class="content2">
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                        </div>    
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="sep"></div>
+
+            <div class="section4">
+                <div class="module">
+                    <div class="module-title">模块二</div> 
+
+                    <div class="module-content">
+                        <div class="module-img">
+                            <img src="./bear-module.png" alt="" style="display: block;margin-top: -2.5rem;">
+                            <img src="./bear-module.png" alt="" style="display: block;margin-top:1.2rem;margin-bottom: -3.5rem;;">
+                        </div>
+                        <div class="content1">
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                            <div class="content-text">这是文案</div>
+                        </div>
+                        <div class="content2">
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                                <div class="content-text">这是文案</div>
+                        </div>                                                 
+                    </div>                   
+                </div>
+            </div>
+            <div class="sep"></div>
+
+            <div class="section5">
+                <div class="part1">
+                    <div class="part-img">
+                        <img src="./bear-module.png" alt="">
+                    </div>
+                    <div class="part-content">
+                        <div class="part-title">这是文章标题字号是22的文章标题</div>
+                        <br>
+                        <div class="part-source">文章来源 6分钟前</div>                       
+                    </div>
+                </div>
+
+                <div class="part2">
+                    <div class="part-img">
+                        <img src="./bear-module.png" alt="">
+                    </div>
+                    <div class="part-content">
+                        <div class="part-title">这是文章标题字号是22的文章标题</div>
+                        <div class="part-source">文章来源 6分钟前</div>                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="section6">
+                <div class="sec6-title">这个也是文章标题字号是22的文章标题</div>
+                <div class="sec6-imgs">
+                    <img class="sec6-img" src="./bear5.png" alt="">
+                    <img class="sec6-img" src="./bear5.png" alt="">
+                    <img class="sec6-img" src="./bear5.png" alt="">
+                </div>
+                <div class="sec7-source">文章来源 7分钟前</div>
+            </div>
+            <div class="sep"></div>
+
+
+
+        </div>
+    </div>
+
+   
+</body>
+</html>
